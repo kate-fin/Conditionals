@@ -4,6 +4,23 @@
     android:layout_height="match_parent"
     android:weightSum="3"
     android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:onClick="saveSentences"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:onClick="deleteSentences"/>
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +60,8 @@
             android:id="@+id/edit_cond0"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/title0"/>
+            android:layout_below="@id/title0"
+            android:inputType="textMultiLine"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
