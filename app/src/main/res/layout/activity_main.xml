@@ -1,149 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="3"
-    android:orientation="vertical" >
-    <LinearLayout
+    android:background="@color/colorMain">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
+        android:layout_height="match_parent"
+        android:weightSum="6"
+        android:orientation="vertical"
+        android:layout_margin="5sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:onClick="deleteSentences"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Next"
+                android:onClick="nextActivity"/>
+        </LinearLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Save"
-            android:onClick="saveSentences"/>
-        <Button
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/title0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorHeader">
+                <TextView
+                    android:id="@+id/title01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cond 0"
+                    android:layout_weight="1"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/title02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="универс. факты"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/title03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if + PrS, PrS"
+                    android:layout_weight="1"
+                    android:textSize="22sp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_cond0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title0"
+                android:inputType="textMultiLine"/>
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Delete"
-            android:onClick="deleteSentences"/>
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorHeader">
+                <TextView
+                    android:id="@+id/title11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cond 1"
+                    android:layout_weight="1"
+                    android:textSize="26sp" />
+                <TextView
+                    android:id="@+id/title12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="возм в будущ"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/title13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if + PrS, FS"
+                    android:layout_weight="1"
+                    android:textSize="26sp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_cond1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title1"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorHeader">
+                <TextView
+                    android:id="@+id/title21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cond 2"
+                    android:layout_weight="1"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/title22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="невозм осущ\nмечты советы"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/title23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if + PS, would + V"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_cond2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title2"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorHeader">
+                <TextView
+                    android:id="@+id/title31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Con 3"
+                    android:layout_weight="1"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/title32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="вообр прош\nсож о прош"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/title33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if+PPer,would+have+V3"
+                    android:layout_weight="1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_cond3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title3"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/title4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorHeader">
+                <TextView
+                    android:id="@+id/title41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mix 1"
+                    android:layout_weight="1"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/title42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="усл в прош\nрез в наст"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/title43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if + PPerf, would + V"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_mix1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title4"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/title5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorHeader">
+                <TextView
+                    android:id="@+id/title51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mix 2"
+                    android:layout_weight="1"
+                    android:textSize="22sp" />
+                <TextView
+                    android:id="@+id/title52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="усл в наст\nрез в прош"
+                    android:textColor="@color/colorText"
+                    android:layout_weight="1"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/title53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="if + PS, would + have + V3"
+                    android:layout_weight="1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_mix2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title5"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Заметки"
+                android:textSize="18sp"
+                android:background="@color/colorHeader"/>
+            <EditText
+                android:id="@+id/edit_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
     </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/title0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/title01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cond 0"
-                android:background="#e0e0e0"
-                android:layout_weight="1"
-                android:textSize="22sp" />
-            <TextView
-                android:id="@+id/title02"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="универс. факты"
-                android:layout_weight="1"
-                android:background="#e0e0e0"
-                android:textSize="16sp" />
-            <TextView
-                android:id="@+id/title03"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="if + PrS, PrS"
-                android:layout_weight="1"
-                android:background="#e0e0e0"
-                android:textSize="22sp" />
-        </LinearLayout>
-        <EditText
-            android:id="@+id/edit_cond0"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/title0"
-            android:inputType="textMultiLine"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/title1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/title11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cond 1"
-                android:background="#e0e0e0"
-                android:layout_weight="1"
-                android:textSize="26sp" />
-            <TextView
-                android:id="@+id/title12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="возм в будущ"
-                android:layout_weight="1"
-                android:background="#e0e0e0"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/title13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="if + PrS, FS"
-                android:layout_weight="1"
-                android:background="#e0e0e0"
-                android:textSize="26sp" />
-        </LinearLayout>
-        <EditText
-            android:id="@+id/edit_cond1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/title1"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <LinearLayout
-            android:id="@+id/title2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/title21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cond 2"
-                android:background="#e0e0e0"
-                android:layout_weight="1"
-                android:textSize="22sp" />
-            <TextView
-                android:id="@+id/title22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="невозм осущ\nмечты советы"
-                android:layout_weight="1"
-                android:background="#e0e0e0"
-                android:textSize="16sp" />
-            <TextView
-                android:id="@+id/title23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="if + PS, would + V"
-                android:layout_weight="1"
-                android:background="#e0e0e0"
-                android:textSize="20sp" />
-        </LinearLayout>
-        <EditText
-            android:id="@+id/edit_cond2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/title2"/>
-    </RelativeLayout>
-</LinearLayout>
+</ScrollView>
